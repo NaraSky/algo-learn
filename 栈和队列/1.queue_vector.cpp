@@ -105,7 +105,7 @@ void outputQueue(Queue *q) {
     printf("Queue : ");
     for (int i = 0; i < q->count; i++) {
         // 输出从头部索引开始的每个元素
-        printf("%4d", vectorSeek(q->data, (q->he ad + i) % q->size));
+        printf("%4d", vectorSeek(q->data, (q->head + i) % q->size));
     }
     printf("\n\n");
     return;
