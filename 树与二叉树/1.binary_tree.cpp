@@ -43,12 +43,12 @@ int head, tail;            // 队列头尾指针
 
 // 广度优先遍历 (BFS)
 void bfs(Node *root) {
-    head = tail = 0;                        // 初始化队列指针
-    queue[tail++] = root;                   // 将根节点加入队列
-    while (head < tail) {                   // 队列非空时继续循环
-        Node *node = queue[head];           // 取出队首节点
-        printf("\nnode : %d\n", node->key); // 输出当前节点的值
-        if (node->lchild) {                 // 如果有左子节点，加入队列
+    head = tail = 0;              // 初始化队列指针
+    queue[tail++] = root;         // 将根节点加入队列
+    while (head < tail) {         // 队列非空时继续循环
+        Node *node = queue[head]; // 取出队首节点
+        printf("\nnode : %d\n", node->key);
+        if (node->lchild) { // 如果有左子节点，加入队列
             queue[tail++] = node->lchild;
             printf("\t%d->%d (left)\n", node->key, node->lchild->key);
         }
